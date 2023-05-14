@@ -1,0 +1,79 @@
+.parallax
+	position relative
+	
+	&__layer
+		transition transform 0.3s linear
+	
+	&__img-wrapper
+		position relative
+		margin-top 38px
+		
+		&::before
+			content ""
+			position absolute
+			inset 0
+			border-top-right-radius 217px
+			background var(--green)
+	
+	&__img
+		position relative
+		vertical-align middle
+		max-width none
+		
+		@media $mdMinus
+			max-width 530px
+		
+		@media $smMinus
+			max-width 460px
+		
+		@media $xs
+			max-width 100%
+	
+	&__first-leaf,
+	&__second-leaf,
+	&__first-circle,
+	&__second-circle,
+	&__star
+		position absolute
+		z-index 10
+	
+	&__first-leaf
+		top 36px
+		left 90px
+		
+		@media $mdMinus
+			top 24px
+			left 60px
+		
+		@media $xs
+			left 30px
+	
+	&__first-circle
+		top 203px
+		left -21px
+	
+	&__second-leaf
+		right 122px
+		bottom -12px
+	
+	&__star
+		right 59px
+		bottom 94px
+		
+		@media $xs
+			bottom 60px
+	
+	&__second-circle
+		right -26px
+		bottom 40px
+		
+		@media $smMinus
+			right -44px
+			bottom 20px
+		
+		@media $xs
+			right -26px
+		
+		@media $xxs
+			right -10px
+			bottom -16px

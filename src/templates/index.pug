@@ -1,5 +1,89 @@
 extends layouts/base
 
 block content
-  .container
-    p Hello world!
+  .hero-section
+    .container
+      .hero-section__inner
+        .hero-section__col
+          .hero-section__logo forayfoodies
+          h1.hero-section__title Mum’s best #[br.hidden-xs]recipe Challenge
+          .hero-section__text
+            p Lorem ipsum dolor sit amet consectetur. Purus nunc tortor aliquet id commodo. Et tellus consectetur scelerisque at malesuada morbi porttitor. Urna consequat at lacinia lobortis at neque. &nbsp;Purus nunc tortor aliquet id commodo.
+          ul.list.hero-section__list
+            li.list__item
+              .list__item-title WHEN
+              .list__item-text may, 14 - September, 14
+            li.list__item
+              .list__item-title WHERE
+              .list__item-text Universe Hall, 34th Street, Los Angeles, CA, USA
+          .hero-section__btn-wrapper
+            a(href="#").btn-orange Enroll your Mom
+        .hero-section__col
+          .collage.hero-section__collage
+            .collage__square.collage__square--first.collage__square--orange.collage__square--rounded-rt.animated-on-scroll.animated--fadeInDown
+            .collage__square.collage__square--second.collage__square--aqua.collage__square--rounded-rb.animated-on-scroll.animated--fadeInDown
+            .collage__square.collage__square--third.collage__square--green.collage__square--rounded-lt.animated-on-scroll.animated--fadeInDown
+            .collage__photo.collage__photo--twocol
+              .collage__photo-slider
+                img(src="/img/cute-mother-baby-child-outdoor.jpg" alt="").collage__photo-img.collage__photo-img--rounded-lt.collage__photo-img--rounded-rb
+                img(src="/img/jason-briscoe-unsplash.jpg" alt="").collage__photo-img.collage__photo-img--rounded-lt.collage__photo-img--rounded-rb
+                img(src="/img/jason-briscoe-unsplash-2.jpg" alt="").collage__photo-img.collage__photo-img--rounded-lt.collage__photo-img--rounded-rb
+                img(src="/img/jason-briscoe-unsplash-3.jpg" alt="").collage__photo-img.collage__photo-img--rounded-lt.collage__photo-img--rounded-rb
+            .collage__square.collage__square--fourth.collage__square--orange.collage__square--rounded-lb.animated-on-scroll.animated--fadeInLeft
+            .collage__square.collage__square--fifth.collage__square--green.collage__square--rounded-lt.animated-on-scroll.animated--fadeInLeft
+            .collage__circle-item
+              .star-shape.star-shape--collage.collage__star
+              .collage__circle
+                img(src="/img/circle_text.svg" alt="")
+            .collage__photo
+              .collage__photo-slider
+                img(src="/img/collage_photo_5.png" alt="").collage__photo-img.collage__photo-img--rounded-lt
+                img(src="/img/collage_photo_6.png" alt="").collage__photo-img.collage__photo-img--rounded-lt
+                img(src="/img/collage_photo_7.png" alt="").collage__photo-img.collage__photo-img--rounded-lt
+                img(src="/img/collage_photo_8.png" alt="").collage__photo-img.collage__photo-img--rounded-lt
+            .collage__photo
+              .collage__photo-slider
+                img(src="/img/collage_photo_9.jpg" alt="").collage__photo-img
+                img(src="/img/collage_photo_10.jpg" alt="").collage__photo-img
+                img(src="/img/collage_photo_11.jpg" alt="").collage__photo-img
+                img(src="/img/collage_photo_12.jpg" alt="").collage__photo-img
+            .collage__square.collage__square--sixth.collage__square--orange.animated-on-scroll.animated--fadeInLeft
+            .collage__square.collage__square--seventh.collage__square--light-green.collage__square--rounded-lb.collage__square--rounded-rt.animated-on-scroll.animated--fadeInLeft
+  .marquee
+    .marquee__inner #ForayFoodiesHowMumMakesItChallenge &nbsp;&nbsp;// &nbsp;&nbsp;#ForayFoodiesHowMumMakesItChallenge &nbsp;&nbsp;// &nbsp;&nbsp;#ForayFoodiesHowMumMakesItChallenge &nbsp;&nbsp;// &nbsp;&nbsp;#ForayFoodiesHowMumMakesItChallenge &nbsp;&nbsp;//
+  .contact-section
+    .container
+      .contact-section__inner
+        .contact-section__col.contact-section__col--first
+          .parallax
+            .parallax__img-wrapper.parallax__layer(data-speed="0.05")
+              img(src="/img/bg_contact_form.png" alt="").parallax__img
+            .leaf-shape.leaf-shape--large.parallax__first-leaf.parallax__layer(data-speed="0.13")
+            .circle-shape.circle-shape--yellow.parallax__first-circle.parallax__layer(data-speed="0.09")
+            .leaf-shape.parallax__second-leaf.parallax__layer(data-speed="0.12")
+            .star-shape.parallax__star.parallax__layer(data-speed="0.15")
+            .circle-shape.parallax__second-circle.parallax__layer(data-speed="0.1")
+        .contact-section__col.contact-section__col--second
+          form(action="#").contact-form.animated-on-scroll.animated--fadeInLeft
+            h2.section-title.contact-form__title Contact Form
+            .contact-form__fields
+              .contact-form__row.contact-form__row--two-col
+                .contact-form__item
+                  label(for="person_name").form-label.contact-form__label Name of person entering their mothers into the event
+                  input(type="text" name="person_name" id="person_name").form-text
+                .contact-form__item
+                  label(for="inviters_email").form-label.contact-form__label The inviters email address
+                  input(type="email" name="inviters_email" id="inviters_email").form-text
+              .contact-form__row
+                .contact-form__item
+                  label(for="recipe").form-label.contact-form__label The recipe they would like to see entered
+                  textarea(name="recipe" id="recipe").form-textarea
+              .contact-form__row.contact-form__row--two-col
+                .contact-form__item
+                  label(for="mothers_name").form-label.contact-form__label The mother's name
+                  input(type="text" name="mothers_name" id="mothers_name").form-text
+                .contact-form__item
+                  label(for="email").form-label.contact-form__label email address
+                  input(type="email" name="email" id="email").form-text
+            .contact-form__actions
+              button(type="submit").btn-orange Send a Recipe

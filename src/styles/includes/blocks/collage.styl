@@ -1,0 +1,151 @@
+.collage
+	display grid
+	grid-template-columns repeat(3, 1fr)
+	grid-template-rows repeat(4, 194px)
+	width 596px
+	max-width 100%
+	
+	@media $mdMinus
+		grid-template-rows repeat(4, 170px)
+		width 520px
+	
+	@media $smMinus
+		grid-template-rows repeat(4, 147px)
+		width 450px
+	
+	@media $xxs
+		width auto
+		grid-template-rows repeat(4, 29.625vw)
+	
+	&__square
+		&--second
+			animation-delay 0.2s
+			
+		&--third
+			animation-delay 0.4s
+			
+		&--fourth
+			animation-delay 0.6s
+			
+		&--fifth
+			animation-delay 0.8s
+			
+		&--sixth
+			animation-delay 1s
+			
+		&--seventh
+			animation-delay 1.35s
+			
+		&--orange
+			background #EDBD6B
+		
+		&--aqua
+			background #BADAD5
+			
+		&--green
+			background var(--green)
+			
+		&--light-green
+			background var(--light-green)
+		
+		&--rounded-rt
+			border-top-right-radius 50%
+			
+		&--rounded-rb
+			border-bottom-right-radius 50%
+			
+		&--rounded-lt
+			border-top-left-radius 50%
+			
+		&--rounded-lb
+			border-bottom-left-radius 50%
+	
+	&__photo
+		position relative
+		z-index 10
+		
+		&--twocol
+			grid-column span 2
+	
+	&__photo-slider
+		position relative
+		
+		.collage__photo-img
+			position absolute
+			top 0
+			left 0
+			opacity 0
+			animation-name fadeInOut
+			animation-duration 9s
+			animation-iteration-count infinite
+			
+			&:nth-child(1)
+				animation-delay 0s
+			
+			&:nth-child(2)
+				animation-delay 2s
+			
+			&:nth-child(3)
+				animation-delay 4s
+			
+			&:nth-child(4)
+				animation-delay 6s
+	
+	&__photo-img
+		&--rounded-lt
+			border-top-left-radius 100px
+			
+			@media $mdMinus
+				border-top-left-radius 90px
+			
+			@media $smMinus
+				border-top-left-radius 70px
+			
+			@media $xxs
+				border-top-left-radius 15vw
+			
+		&--rounded-rb
+			border-bottom-right-radius 100px
+			
+			@media $mdMinus
+				border-bottom-right-radius 90px
+			
+			@media $smMinus
+				border-bottom-right-radius 70px
+			
+			@media $xxs
+				border-bottom-right-radius 15vw
+	
+	&__circle-item
+		position relative
+	
+	&__star
+		position absolute
+		z-index 10
+		top -35px
+		right -35px
+		
+		@media $mdMinus
+			top -30px
+			right -30px
+		
+		@media $smMinus
+			top -24px
+			right -24px
+	
+	&__circle
+		padding 11px
+		border-radius 50%
+		background #B8C26C
+		animation rotate 20s infinite linear
+		
+		@media $xxs
+			padding 2vw
+
+
+@keyframes rotate
+	from
+		transform rotate(0deg)
+
+	to
+		transform rotate(360deg)

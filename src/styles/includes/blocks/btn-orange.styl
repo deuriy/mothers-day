@@ -1,0 +1,44 @@
+.btn-orange
+	position relative
+	display inline-grid
+	grid-template-columns 100%
+	justify-content center
+	justify-items center
+	min-width 15.125em
+	max-width 100%
+	padding 1.375em 2.5625em 1.3125em
+	border none
+	outline none
+	font-weight 800
+	font-size 16px
+	line-height 1.375
+	font-family var(--base-font)
+	background var(--orange)
+	color var(--light)
+	letter-spacing 0.04em
+	text-transform uppercase
+	white-space nowrap
+	cursor pointer
+	text-decoration none
+	@extend .transition
+	
+	@media $smMinus
+		font-size 15px
+	
+	&::before
+		content ""
+		position absolute
+		top 0
+		left 0
+		width calc(100% - 4px)
+		height calc(100% - 4px)
+		border 2px solid var(--orange)
+		@extend .transition
+	
+	&:hover
+		transform translate(-6px, -6px)
+		
+		&::before
+			top 6px
+			left 6px
+			

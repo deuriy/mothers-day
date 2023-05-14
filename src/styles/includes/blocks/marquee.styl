@@ -1,0 +1,33 @@
+.marquee
+	padding 0.54167em 0 0.5833em
+	background var(--dark)
+	color var(--beige)
+	font-weight 600
+	font-size 24px
+	line-height 1.375
+	white-space nowrap
+	overflow hidden
+	
+	@media $mdMinus
+		font-size 21px
+	
+	@media $smMinus
+		font-size 18px
+	
+	@media $xs
+		font-size 17px
+	
+	@media $xxs
+		font-size 16px
+	
+	&__inner
+		display inline-block
+		padding-left 100%
+		animation scroll 20s infinite linear
+
+@keyframes scroll
+	from
+		transform translate(0, 0)
+
+	to
+		transform translate(-100%, 0)

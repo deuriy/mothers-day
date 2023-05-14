@@ -1,0 +1,39 @@
+.list
+	list-style none
+	text-transform capitalize
+	
+	&__item
+		margin-bottom 20px
+		
+		@media $mdMinus
+			margin-bottom 18px
+		
+		&:last-child
+			margin-bottom 0
+	
+	&__item-title
+		font-weight 700
+		font-size 14px
+		line-height 1.35714286
+		letter-spacing 0.2em
+		opacity 0.5
+		
+		@media $mdMinus
+			font-size 13px
+	
+	&__item-text
+		font-weight 400
+		font-size 24px
+		line-height 1.375
+		
+		@media $mdMinus
+			font-size 21px
+		
+		@media $smMinus
+			font-size 18px
+		
+		@media $xs
+			font-size 17px
+		
+		@media $xxs
+			font-size 16px
