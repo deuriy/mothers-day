@@ -1,3 +1,25 @@
+import Swiper, { EffectFlip, Autoplay } from 'swiper';
+
+let collageSwipers = document.querySelectorAll('.collage-swiper');
+collageSwipers.forEach(swiperContainer => {
+	let swiper = new Swiper(swiperContainer, {
+	  modules: [EffectFlip, Autoplay],
+	  
+	  effect: "flip",
+	  flipEffect: {
+	    slideShadows: false,
+	  },
+
+	  loop: true,
+	  allowTouchMove: false,
+	  speed: 1000,
+
+		autoplay: {
+			delay: 2000,
+		}
+	});
+});
+
 let options = {
   threshold: 0.25
 };
